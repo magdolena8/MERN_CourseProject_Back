@@ -4,7 +4,6 @@ const nodemailer = require('nodemailer')
 require('dotenv').config();
 
 
-
 const mongoose = require('mongoose')
 const registeredUsers = require('./models/registeredUsers')
 
@@ -47,9 +46,9 @@ app.post('/api/sendmail',async (req,res)=>{
       `<h1>Dear ${req.body.userName}!</h1><br><br><strong>
       We look forward to welcoming you to the event <strong>${req.body.eventName}</strong>,
        which will take place on <strong>${req.body.eventDate}</strong>. </strong><br><br><br><br>With love, team 
-      <strong>ALTENATIVE</strong> <div>xxx`,
+      <strong>ALTERNATIVE</strong> <div>xxx`,
   })
-  console.log(`Message sent  to ${req.body.email}!`)
+  if(result)console.log(`Message sent  to ${req.body.email}!`)
 
   ////
   const newUsers = new registeredusers({
