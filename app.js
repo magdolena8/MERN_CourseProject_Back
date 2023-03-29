@@ -32,8 +32,8 @@ app.post('/api/sendmail',async (req,res)=>{
     port: 465,
     secure:true,
     auth: {
-        user: 'alt_ernative8@mail.ru',
-        pass: 'itadEqqDR45i2yMk4VHZ'
+        user: '*****',
+        pass: '*****'
     }
   })
 
